@@ -33,7 +33,7 @@
 #' Some number from 1 to 5 should generally be ok. If you realize there are too many warnings, decrease the number.
 #' In practice some of pathway maps will not match. So you need to check them to make sure the warning is not because of missing pathway
 #' 
-#' @import KEGG
+#' @import KEGGREST
 #' @import future.apply
 #' @import foreach
 #' @import doFuture
@@ -124,7 +124,7 @@ return(database)
 #'do_pathway_overrepresentation(references = references,omics_type = omics_type,database_input  = database)
 #'
 #' @return
-#' A class of mixedcirc_fit_list in which the adjusted p-values have been added in the results
+#' A list with pathway information for each omics and also the overlapping pathways
 #'
 #' @details
 #' Each data.frame must contain three columns pathway, hit and name. 
